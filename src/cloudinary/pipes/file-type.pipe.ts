@@ -1,20 +1,3 @@
-// import { BadRequestException, Injectable, PipeTransform } from '@nestjs/common';
-// import { fileTypeFromBuffer } from 'file-type';
-
-// @Injectable()
-// export class FileTypeImagesValidationPipe implements PipeTransform {
-//   async transform(value: Express.Multer.File) {
-//     const { mime } = await fileTypeFromBuffer(value.buffer)
-//     const MIME_TYPES = ['image/jpeg', 'image/png', 'image/webp']
-
-//     if (!MIME_TYPES.includes(mime)) {
-//       throw new BadRequestException('The image should be either jpeg, png, or webp.')
-//     }
-
-//     return value
-//   }
-// }
-
 import { ArgumentMetadata, BadRequestException, Injectable, PipeTransform } from '@nestjs/common';
 
 import { validateFileFormat } from '../helpers/file';
